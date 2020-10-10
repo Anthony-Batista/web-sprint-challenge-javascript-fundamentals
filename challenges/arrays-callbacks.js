@@ -20,25 +20,36 @@ const zooAnimals = [
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const displayNames = [];
-console.log(displayNames);
+const displayNames = []
+zooAnimals.forEach(function (i) {
+  return displayNames.push('Name: ' + i.animal_name + ', scientific: ' + i.scientific_name);
+})
+
+console.log(displayNames)
+
 
 /* Request 2: .map()
 
-The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
+The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the result.
 
 */
 
-const lowCaseAnimalNames
-console.log(lowCaseAnimalNames);
+const lowCaseAnimalNames = zooAnimals.map(function (i) {
+  return i.animal_name.toLowerCase()
+})
+
+console.log(lowCaseAnimalNames)
 
 /* Request 3: .filter() 
 
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals
-console.log(lowPopulationAnimals);
+lowPopulationAnimals = zooAnimals.filter(function(i) {
+  return i.population < 5
+})
+
+console.log(lowPopulationAnimals)
 
 /* Request 4: .reduce() 
 
@@ -57,6 +68,8 @@ console.log(populationTotal);
   * The last parameter accepts a callback
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
+consume = (a, b, cb) => cb (a, b)
+
 
 
 /* Step 2: Create several functions to callback with consume();
@@ -65,11 +78,17 @@ console.log(populationTotal);
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
+add = (a, b) =>  a + b
+
+multiply = (a, b) => a * b
+
+greeting = (firstName, lastName) => `Hello ${firstName + ' ' + lastName}, nice to meet you! `
+
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 
