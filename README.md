@@ -51,6 +51,8 @@ Explicit Binding: Used whenever using call or apply method.
 
 5. Why do we need super() in an extended class?
 
+You need super if you want to extend a class.
+
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
 ## Instructions
