@@ -41,6 +41,13 @@ Closure is what lets you access another functions scope from within an inner fun
 
 4. Describe the four rules of the 'this' keyword.
 
+Global Object Binding: When being used in the global scope
+
+Implicit Binding: When used before a dot that is calling a function
+
+New Binding: When using constructor functions.
+
+Explicit Binding: Used whenever using call or apply method.
 
 5. Why do we need super() in an extended class?
 
