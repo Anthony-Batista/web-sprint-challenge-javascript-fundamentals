@@ -16,9 +16,21 @@ function myFunction() {
 }
 myFunction();
 
-// Explanation: 
+// Explanation: const internal is in the same function scope so nestedFunction can access it. If I were to write some new code somewhere else on this page that was not in that big block of code, it would not be able to access it
+
 
 
 /* Task 2: Counter */
 
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+
+let sum = 0
+
+function summation(number){
+  for (let i = 1; i <=number; i++){
+    sum += i
+  }
+  return sum
+}
+
+console.log(summation(4))
